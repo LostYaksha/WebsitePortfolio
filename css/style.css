@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 
 * {
     margin: 0;
@@ -8,18 +8,18 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-    font-family: 'poppins', sans-serif;
+    font-family: 'SUSE', sans-serif;
 }
 
 :root {
-    --bg-color: #081b29;
-    --second-bg-color: #112e42;
-    --text-color: #ededed;
-    --main-color: #00abf0;
+    --bg-color: #1b1f38;
+    --second-bg-color: #2d3047;
+    --text-color: #f5f5f5;
+    --main-color: #ff9f1c;
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 70%;
     overflow-x: hidden;
 }
 
@@ -86,10 +86,7 @@ section {
 .home {
     display: flex;
     align-items: center;
-    background-image: url('/Week 5/Day 5/Portfolio website/images//background.jpg');
     padding: 0 9%;
-    background-size: cover;
-    background-position: right;
 }
 
 .home-content {
@@ -104,7 +101,7 @@ section {
 }
 
 .home-content h1 span {
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 .home-content .text-animate {
@@ -584,7 +581,7 @@ span {
 }
 
 .contact form .input-box {
-    margin: 1rem 0 5rem;
+    margin: 1rem 0 0;
     display: flex;
 }
 
@@ -788,11 +785,15 @@ section:nth-child(odd) .animate.animate.scroll,
     }
 
     #menu-icon {
-        display:  block;
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
     }
 
     .navbar {
-        position: absolute;
+        display: none;
+        position: relative;
         top: 100%;
         left: 0;
         width: 100%;
@@ -805,8 +806,16 @@ section:nth-child(odd) .animate.animate.scroll,
     }
 
     .navbar.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
         left: 0;
-        transition-delay: 0s;
+        width: 100%;
+        background: var(--bg-color); 
+        z-index: 10; 
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
     }
 
     .navbar .active-nav {
