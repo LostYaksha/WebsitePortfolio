@@ -231,7 +231,7 @@ section {
     border-radius: 50%;
     font-size: 20px;
     color: var(--main-color);
-    z-index: 1;
+    z-index: 99;
     overflow: hidden;
     transition: .5s;
 }
@@ -551,7 +551,7 @@ span {
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-    width: 30%;
+    width: 70%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
