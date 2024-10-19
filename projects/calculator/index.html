@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap"
+      rel="stylesheet"/>
+  </head>
+
+  <body>
+    <!-- header design  -->
+    <header class="header">
+      <a href="#" class="logo">Rafe</span></a>
+      <div class="bx bx-menu" id="menu-icon">
+      </div>
+
+      <nav class="navbar">
+        <a href="../../#home" class="active">Home</a>
+        <a href="../projects.html" class="active">Projects</a>
+
+      </nav>
+    </header>
+
+    <!-- home section-->
+    <div class="home-content">
+      <h1>My <span>Calculator</span></h1>
+    </div>
+
+    <!--animations-->
+    <div class="shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+
+
+    <!-- Calculator -->
+        <div class="calculator">
+          <input type="text" id="display" class="calculator-display" disabled />
+            <div class="calculator-buttons">
+              <button class="btn" onclick="clearDisplay()">C</button>
+              <button class="btn" onclick="deleteLast()">⌫</button>
+              <button class="btn" onclick="appendToDisplay('%')">%</button>
+              <button class="btn operator" onclick="appendToDisplay('/')">÷</button>
+      
+              <button class="btn" onclick="appendToDisplay('7')">7</button>
+              <button class="btn" onclick="appendToDisplay('8')">8</button>
+              <button class="btn" onclick="appendToDisplay('9')">9</button>
+              <button class="btn operator" onclick="appendToDisplay('*')">×</button>
+      
+              <button class="btn" onclick="appendToDisplay('4')">4</button>
+              <button class="btn" onclick="appendToDisplay('5')">5</button>
+              <button class="btn" onclick="appendToDisplay('6')">6</button>
+              <button class="btn operator" onclick="appendToDisplay('-')">−</button>
+      
+              <button class="btn" onclick="appendToDisplay('1')">1</button>
+              <button class="btn" onclick="appendToDisplay('2')">2</button>
+              <button class="btn" onclick="appendToDisplay('3')">3</button>
+              <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+      
+              <button class="btn zero" onclick="appendToDisplay('0')">0</button>
+              <button class="btn zero" onclick="appendToDisplay('00')">00</button>
+              <button class="btn" onclick="appendToDisplay('.')">.</button>
+              <button class="btn equal" onclick="calculate()">=</button>
+            </div>
+        </div>
+
+    <!-- footer design-->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyleft &#127279; 2024 by Rafe | Feel free to share.</p>
+        <span class="animate scroll" style="--i: 1"></span>
+      </div>
+
+      <div class="footer-icontop">
+        <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
+        <span class="animate scroll" style="--i: 3"></span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

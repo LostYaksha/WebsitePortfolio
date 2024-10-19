@@ -1,0 +1,288 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'SUSE', sans-serif;
+}
+
+:root {
+    --bg-color: #1b1f38;
+    --second-bg-color: #2d3047;
+    --text-color: #f5f5f5;
+    --main-color: #ff9f1c;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 70%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    display: flex;
+    background: transparent;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky {
+    background-color: var(--bg-color);
+}
+
+.logo {
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .5s; 
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    display: none;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.home-content h1 {
+    font-size: 4rem;
+    
+}
+
+.home-content h1 span {
+    color: var(--main-color);
+}
+
+
+/*! Calculator Section */
+.calculator {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+  
+.calculator-display {
+    width: 100%;
+    height: 60px;
+    background: #33333363;
+    color: #fff;
+    border: none;
+    text-align: right;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+  
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+  
+.btn {
+    background-color: #f1f3f4;
+    border: none;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.btn:hover {
+    background-color: #e0e0e0;
+}
+  
+.operator {
+    background-color: #fe9241;
+    color: white;
+}
+  
+.operator:hover {
+    background-color: #fa8120;
+}
+  
+.equal {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 30px;
+}
+  
+.equal:hover {
+    background-color: #45a049;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+  
+
+/*! Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color); 
+  
+}
+
+.footer-text {
+    position: relative;
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+
+
+/*! Blinking animation */
+.home-content h1 span {
+    animation: blink 2s infinite;
+}
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+
+
+  /*! shapes *//* General styling */
+
+.shapes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+.shape {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    animation: move-random 15s infinite ease-in-out;
+    opacity: 0.7;
+    mix-blend-mode: screen;
+  }
+  
+.shape-1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    top: 10%;
+    left: 20%;
+    animation-duration: 12s;
+  }
+  
+.shape-2 {
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: 70%;
+    background-color: rgba(255, 0, 0, 0.7);
+    animation-duration: 18s;
+  }
+  
+.shape-3 {
+    width: 70px;
+    height: 70px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); 
+    top: 50%;
+    left: 40%;
+    background-color: rgba(0, 255, 0, 0.7);
+    animation-duration: 10s;
+  }
+  
+.shape-4 {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    top: 80%;
+    left: 10%;
+    background-color: rgba(0, 0, 255, 0.7);
+    animation-duration: 20s;
+  }
+  
+.shape-5 {
+    width: 120px;
+    height: 60px;
+    border-radius: 60px / 30px; 
+    top: 60%;
+    left: 50%;
+    background-color: rgba(255, 255, 0, 0.7);
+    animation-duration: 25s;
+  }
+  
+@keyframes move-random {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(100vw, -50vh);
+    }
+    50% {
+      transform: translate(-80vw, 60vh);
+    }
+    75% {
+      transform: translate(50vw, 100vh);
+    }
+    100% {
+      transform: translate(-100vw, -100vh);
+    }
+  }
+  
