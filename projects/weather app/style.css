@@ -9,8 +9,21 @@
     font-family: 'SUSE', sans-serif;
 }
 
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 70%;
+    overflow-x: hidden;
+}
 
-header {
+body {
+    background:  #2d3047;
+}
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -24,15 +37,11 @@ header {
     transition: .3s;
 }
 
-.header.sticky {
-    background-color: var(--bg-color);
-}
-
 .logo {
     position: relative;
     font-size: 2.5rem;
-    color: var(--text-color);
     font-weight: 600;
+    color: #fff;
 }
 
 .navbar {
@@ -42,15 +51,14 @@ header {
 
 .navbar a {
     font-size: 1.7rem;
-    color: var(--text-color);
+    color: #fff;
     font-weight: 500;
     margin-left: 3.5rem;
     transition: .5s; 
 }
 
-.navbar a:hover,
-.navbar a.active {
-    color: var(--main-color);
+.navbar a:hover {
+    color: #ff9500;
 }
 
 #menu-icon {
@@ -60,22 +68,22 @@ header {
     cursor: pointer;
 }
 
-
-
-
-
-body {
-    background: #8c52ff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    flex-direction: row;
+.home-content h1 {
+    font-size: 4rem;
 }
+
+.home-content h1 span {
+    color: var(--main-color);
+}
+
+
+
+
+/*! weather app */
+
+
 #weather-container {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: #67686d;
     max-width: 400px;
     padding: 20px;
     border-radius: 15px;
@@ -84,10 +92,13 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
 }
+
 h2, label, p {
-    color: #fff;
+    color: #ff9500;
+    font-size: 25px;
     margin: 8px 0;
 }
+
 input {
     width: calc(100% - 16px);
     padding: 8px;
@@ -96,8 +107,9 @@ input {
     border: 1px solid white;
     margin-top: 20px;
 }
+
 button {
-    background: #debff4;
+    background: #ca95f0;
     color: white;
     padding: 10px;
     border: none;
@@ -105,18 +117,22 @@ button {
     cursor: pointer;
     margin-top: 20px;
     width: 100px;
-    font-size: 15px;
+    font-size: 19px;
 }
+
 button:hover {
     background: #8b48d7;
 }
+
 #temp-div p {
     font-size: 60px;
     margin-top: 10px;
 }
+
 #weather-info {
     font-size: 20px;
 }
+
 #weather-icon {
     width: 200px;
     height: 200px;
@@ -124,6 +140,7 @@ button:hover {
     margin-bottom: 0;
     display: none;
 }
+
 #hourly-forcost {
     margin-top: 50px;
     overflow-x: auto;
@@ -131,6 +148,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
 }
+
 .hourl-item {
     flex: 0 0 auto;
     width: 80px;
@@ -139,11 +157,13 @@ button:hover {
     margin-right: 10px;
     color: white;
 }
+
 .hourly-item img {
     width: 30px;
     height: 30px;
     margin-bottom: 5px;
 }
+
 #hourly-heading {
     color: #fff;
     margin-top: 10px;
