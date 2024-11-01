@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <header class="header">
+    <a href="#" class="logo"
+      >Rafe<span class="animate" style="--i: 1"></span
+    ></a>
+    <div class="bx bx-menu" id="menu-icon">
+      <span class="animate" style="--i: 2"></span>
+    </div>
+
+    <nav class="navbar">
+      <a href="../../#home" class="active">Home</a>
+      <a href="../projects.html" class="active">Projects</a>
+
+      <span class="active-nav"></span>
+      <span class="animate" style="--i: 2"></span>
+    </nav>
+  </header>
+
+  <body>
+    <div id="weather-container">
+      <h2>weather app</h2>
+      <input type="text" id="city" placeholder="Enter City" />
+      <button onclick="getWeather()" alt="Weather Icon">Search</button>
+      <div id="temp-div"></div>
+      <div id="current-weather"></div>
+
+      <div id="weather-info"></div>
+      <div id="hourly-forecast"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
